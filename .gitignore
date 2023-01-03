@@ -1,0 +1,8 @@
+*
+!*/
+!/.gitignore
+
+!/syntaxes/cordy.tmLanguage.json
+!/language-configuration.json
+!/package.json
+!/README.md
