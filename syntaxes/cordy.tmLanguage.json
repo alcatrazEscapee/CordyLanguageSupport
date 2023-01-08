@@ -43,13 +43,13 @@
         "builtins": {
             "patterns": [{
                 "name": "support.function.cordy",
-                "match": "\\b(print|read|read_text|write_text|to_lower|to_upper|replace|trim|index_of|count_of|split|len|range|enumerate|sum|min|max|map|filter|reduce|sorted|reversed|pop|push|last|head|tail|init|insert|remove|merge|abs|gcd|lcm)\\b"
+                "match": "\\b(print|bool|repr|len|range|enumerate|sum|min|max|map|filter|flat_map|concat|zip|reduce|sorted|reversed|permutations|combinations|pop|push|last|head|init|tail|abs|sqrt|lcm|gcd|split|default|keys|values\\b)"
             }]
         },
         "types": {
             "patterns": [{
                 "name": "support.type.cordy",
-                "match": "\\b(int|str|function|list|heap|dict|set)\\b"
+                "match": "\\b(int|str|function|list|heap|dict|set|vector|any|iterable)\\b"
             }]
         },
         "comment.line": {
