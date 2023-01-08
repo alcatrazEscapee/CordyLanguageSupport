@@ -4,5 +4,13 @@
 
 !/syntaxes/cordy.tmLanguage.json
 !/language-configuration.json
+
 !/package.json
+!/package-lock.json
+!/tsconfig.json
+
+!/generate-docs.py
+
+!/src/**/*.ts
+
 !/README.md
