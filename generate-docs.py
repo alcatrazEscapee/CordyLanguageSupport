@@ -45,7 +45,7 @@ export function getHovers(): Map<string, string> {
 """)
 
     print('Functions (for syntaxes/cordy.tmLanguage.json)')
-    print('"\\\\b(' + '|'.join(k for k in docs.keys() if k not in TYPES) + '\\\\b)"')
+    print('"\\\\b(' + '|'.join(k for k in docs.keys() if k not in TYPES) + ')\\\\b"')
 
 if __name__ == '__main__':
     main()
