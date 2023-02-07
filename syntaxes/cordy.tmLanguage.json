@@ -16,13 +16,13 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.cordy",
-                "match": "\\b(let|fn|return|if|elif|else|loop|while|for|in|is|break|continue|struct|exit)\\b"
+                "match": "\\b(let|fn|return|if|elif|then|else|loop|while|for|in|is|break|continue|struct|exit|not|or|and|do)\\b"
             }]
         },
         "constants": {
             "patterns": [{
                 "name": "constant.language.cordy",
-                "match": "\\b(true|false|nil|or|and)\\b"
+                "match": "\\b(true|false|nil)\\b"
             }]
         },
         "numbers": {
@@ -43,7 +43,7 @@
         "builtins": {
             "patterns": [{
                 "name": "support.function.cordy",
-                "match": "\\b(print|bool|repr|len|range|enumerate|sum|min|max|map|filter|flat_map|concat|zip|reduce|sorted|reversed|permutations|combinations|pop|push|last|head|init|tail|abs|sqrt|lcm|gcd|split|default|keys|values\\b)"
+                "match": "\\b(print|bool|repr|eval|len|range|enumerate|sum|min|min_by|max|max_by|map|filter|flat_map|concat|zip|reduce|sort|sort_by|reverse|permutations|combinations|all|memoize|pop|pop_front|push|push_front|insert|remove|clear|find|rfind|index_of|rindex_of|abs|sqrt|lcm|gcd|split|replace|default|keys|values)\\b"
             }]
         },
         "types": {
