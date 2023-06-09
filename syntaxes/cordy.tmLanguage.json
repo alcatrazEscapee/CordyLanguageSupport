@@ -43,7 +43,7 @@
         "builtins": {
             "patterns": [{
                 "name": "support.function.cordy",
-                "match": "\\b(print|bool|repr|eval|len|range|enumerate|sum|min|min_by|max|max_by|map|filter|flat_map|concat|zip|reduce|sort|sort_by|reverse|permutations|combinations|all|memoize|pop|pop_front|push|push_front|insert|remove|clear|find|rfind|index_of|rindex_of|abs|sqrt|lcm|gcd|split|replace|default|keys|values)\\b"
+                "match": "\\b(print|read|read_line|read_text|write_text|env|argv|bool|repr|eval|typeof|len|range|enumerate|sum|min|min_by|max|max_by|map|filter|flat_map|concat|zip|reduce|sort|sort_by|reverse|permutations|combinations|all|memoize|pop|pop_front|push|push_front|insert|remove|clear|find|rfind|index_of|rindex_of|abs|sqrt|count_ones|count_zeros|lcm|gcd|split|replace|search|default|keys|values)\\b"
             }]
         },
         "types": {
