@@ -16,7 +16,7 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.cordy",
-                "match": "\\b(let|fn|return|if|elif|then|else|loop|while|for|in|is|break|continue|struct|exit|not|or|and|do)\\b"
+                "match": "\\b(let|fn|return|if|elif|else|then|loop|while|for|in|is|not|break|continue|do|struct|exit|assert)\\b"
             }]
         },
         "constants": {
@@ -28,7 +28,7 @@
         "numbers": {
             "patterns": [{
                 "name": "constant.numeric.cordy",
-                "match": "\\b(0x|0b)?[0-9]+\\b"
+                "match": "\\b(0x|0b)?[0-9_]+\\b"
             }]
         },
         "strings": {
@@ -43,13 +43,13 @@
         "builtins": {
             "patterns": [{
                 "name": "support.function.cordy",
-                "match": "\\b(print|read|read_line|read_text|write_text|env|argv|bool|repr|eval|typeof|len|range|enumerate|sum|min|min_by|max|max_by|map|filter|flat_map|concat|zip|reduce|sort|sort_by|reverse|permutations|combinations|all|memoize|pop|pop_front|push|push_front|insert|remove|clear|find|rfind|index_of|rindex_of|abs|sqrt|count_ones|count_zeros|lcm|gcd|split|replace|search|default|keys|values)\\b"
+                "match": "\\b(print|read|read_line|read_text|write_text|env|argv|bool|repr|eval|typeof|len|range|enumerate|sum|min|min_by|max|max_by|map|filter|flat_map|concat|zip|reduce|sort|sort_by|group_by|reverse|permutations|combinations|all|memoize|pop|pop_front|push|push_front|insert|remove|clear|find|rfind|index_of|rindex_of|abs|sqrt|count_ones|count_zeros|lcm|gcd|split|join|replace|search|default|keys|values)\\b"
             }]
         },
         "types": {
             "patterns": [{
                 "name": "support.type.cordy",
-                "match": "\\b(int|str|function|list|heap|dict|set|vector|any|iterable)\\b"
+                "match": "\\b(int|str|function|list|heap|dict|set|vector|any|iterable|bool)\\b"
             }]
         },
         "comment.line": {

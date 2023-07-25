@@ -1,9 +1,10 @@
 import re
 
+CORDY = '../cordy'
 TYPES = ('int', 'str', 'function', 'list', 'heap', 'dict', 'set', 'vector', 'any', 'iterable')
 
 def main():
-    with open('../cordy/docs/stdlib.md', 'r', encoding='utf-8') as f:
+    with open('%s/docs/stdlib.md' % CORDY, 'r', encoding='utf-8') as f:
         text = f.read()
     
     prefix = False
@@ -43,9 +44,26 @@ export function getHovers(): Map<string, string> {
         f.write("""    ]);
 }
 """)
+        
+    with open('%s/src/compiler/scanner.rs' % CORDY, 'r', encoding='utf-8') as f:
+        text = f.read()
+    
+    keywords = []
+    for line in text.split('\n'):
+        match = re.match(r'    Keyword([A-Z][a-z]+),', line)
+        if match:
+            key = match.group(1).lower()
+            if key != 'true' and key != 'false' and key != 'nil':
+                keywords.append(key)
 
-    print('Functions (for syntaxes/cordy.tmLanguage.json)')
+
+    print('For syntaxes/cordy.tmLanguage.json:')
+    print('Functions:\n')
     print('"\\\\b(' + '|'.join(k for k in docs.keys() if k not in TYPES) + ')\\\\b"')
+    print('\nKeywords:\n')
+    print('"\\\\b(' + '|'.join(keywords) + ')\\\\b"')
+
+
 
 if __name__ == '__main__':
     main()
