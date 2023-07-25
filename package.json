@@ -2,7 +2,7 @@
     "name": "cordy-language-support",
     "displayName": "cordy-language-support",
     "description": "Language Support for Cordy",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "engines": {
         "vscode": "^1.74.0"
     },
