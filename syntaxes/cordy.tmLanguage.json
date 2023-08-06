@@ -3,54 +3,82 @@
     "scopeName": "source.cordy",
     "name": "Cordy",
     "patterns": [
-        { "include": "#keywords" },
-        { "include": "#constants" },
-        { "include": "#strings" },
-        { "include": "#numbers" },
-        { "include": "#builtins" },
-        { "include": "#types" },
-        { "include": "#comment.line" },
-        { "include": "#comment.block" }
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#builtins"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#comment.line"
+        },
+        {
+            "include": "#comment.block"
+        }
     ],
     "repository": {
         "keywords": {
-            "patterns": [{
-                "name": "keyword.control.cordy",
-                "match": "\\b(let|fn|return|if|elif|else|then|loop|while|for|in|is|not|break|continue|do|struct|exit|assert)\\b"
-            }]
+            "patterns": [
+                {
+                    "name": "keyword.control.cordy",
+                    "match": "\\b(let|fn|return|if|elif|else|then|loop|while|for|in|is|not|break|continue|do|struct|exit|assert)\\b"
+                }
+            ]
         },
         "constants": {
-            "patterns": [{
-                "name": "constant.language.cordy",
-                "match": "\\b(true|false|nil)\\b"
-            }]
+            "patterns": [
+                {
+                    "name": "constant.language.cordy",
+                    "match": "\\b(true|false|nil)\\b"
+                }
+            ]
         },
         "numbers": {
-            "patterns": [{
-                "name": "constant.numeric.cordy",
-                "match": "\\b(0x|0b)?[0-9_]+\\b"
-            }]
+            "patterns": [
+                {
+                    "name": "constant.numeric.cordy",
+                    "match": "\\b(0x|0b)?[0-9_]+\\b"
+                }
+            ]
         },
         "strings": {
             "name": "string.quoted.single.cordy",
             "begin": "'",
             "end": "'",
-            "patterns": [{
-                "name": "constant.character.escape.cordy",
-                "match": "\\[\\.\\n\\r]"
-            }]
+            "patterns": [
+                {
+                    "name": "constant.character.escape.cordy",
+                    "match": "\\[\\.\\n\\r]"
+                }
+            ]
         },
         "builtins": {
-            "patterns": [{
-                "name": "support.function.cordy",
-                "match": "\\b(print|read|read_line|read_text|write_text|env|argv|bool|repr|eval|typeof|len|range|enumerate|sum|min|min_by|max|max_by|map|filter|flat_map|concat|zip|reduce|sort|sort_by|group_by|reverse|permutations|combinations|all|memoize|pop|pop_front|push|push_front|insert|remove|clear|find|rfind|index_of|rindex_of|abs|sqrt|count_ones|count_zeros|lcm|gcd|split|join|replace|search|default|keys|values)\\b"
-            }]
+            "patterns": [
+                {
+                    "name": "support.function.cordy",
+                    "match": "\\b(print|read|read_line|read_text|write_text|env|argv|bool|repr|eval|typeof|len|range|enumerate|sum|min|min_by|max|max_by|map|filter|flat_map|concat|zip|reduce|sort|sort_by|group_by|reverse|permutations|combinations|all|memoize|pop|pop_front|push|push_front|insert|remove|clear|find|rfind|index_of|rindex_of|abs|sqrt|count_ones|count_zeros|lcm|gcd|split|join|replace|search|ord|char|default|keys|values)\\b"
+                }
+            ]
         },
         "types": {
-            "patterns": [{
-                "name": "support.type.cordy",
-                "match": "\\b(int|str|function|list|heap|dict|set|vector|any|iterable|bool)\\b"
-            }]
+            "patterns": [
+                {
+                    "name": "support.type.cordy",
+                    "match": "\\b(int|str|function|list|heap|dict|set|vector|any|iterable|bool)\\b"
+                }
+            ]
         },
         "comment.line": {
             "name": "comment.line.double-dash.cordy",

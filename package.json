@@ -2,13 +2,14 @@
     "name": "cordy-language-support",
     "displayName": "cordy-language-support",
     "description": "Language Support for Cordy",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "engines": {
         "vscode": "^1.74.0"
     },
     "categories": [
         "Programming Languages"
     ],
+    "activationEvents": [],
     "repository": "https://github.com/alcatrazEscapee/CordyLanguageSupport",
     "main": "./out/extension.js",
     "license": "MIT",

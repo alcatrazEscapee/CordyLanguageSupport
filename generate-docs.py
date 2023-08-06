@@ -1,4 +1,5 @@
 import re
+import json
 
 CORDY = '../cordy'
 TYPES = ('int', 'str', 'function', 'list', 'heap', 'dict', 'set', 'vector', 'any', 'iterable')
@@ -56,12 +57,15 @@ export function getHovers(): Map<string, string> {
             if key != 'true' and key != 'false' and key != 'nil':
                 keywords.append(key)
 
+    with open('./syntaxes/cordy.tmLanguage.json', 'r', encoding='utf-8') as f:
+        syntax = json.load(f)
 
-    print('For syntaxes/cordy.tmLanguage.json:')
-    print('Functions:\n')
-    print('"\\\\b(' + '|'.join(k for k in docs.keys() if k not in TYPES) + ')\\\\b"')
-    print('\nKeywords:\n')
-    print('"\\\\b(' + '|'.join(keywords) + ')\\\\b"')
+    syntax['repository']['keywords']['patterns'][0]['match'] = '\\b(' + '|'.join(keywords) + ')\\b'
+    syntax['repository']['builtins']['patterns'][0]['match'] = '\\b(' + '|'.join(k for k in docs.keys() if k not in TYPES) + ')\\b'
+    
+    with open('./syntaxes/cordy.tmLanguage.json', 'w', encoding='utf-8') as f:
+        json.dump(syntax, f, indent=4)
+    
 
 
 
