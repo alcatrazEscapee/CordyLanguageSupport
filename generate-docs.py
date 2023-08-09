@@ -46,7 +46,7 @@ export function getHovers(): Map<string, string> {
 }
 """)
         
-    with open('%s/src/compiler/scanner.rs' % CORDY, 'r', encoding='utf-8') as f:
+    with open('%s/cordy-sys/src/compiler/scanner.rs' % CORDY, 'r', encoding='utf-8') as f:
         text = f.read()
     
     keywords = []
@@ -65,8 +65,6 @@ export function getHovers(): Map<string, string> {
     
     with open('./syntaxes/cordy.tmLanguage.json', 'w', encoding='utf-8') as f:
         json.dump(syntax, f, indent=4)
-    
-
 
 
 if __name__ == '__main__':
