@@ -33,7 +33,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.cordy",
-                    "match": "\\b(let|fn|return|if|elif|else|then|loop|while|for|in|is|not|break|continue|do|struct|exit|assert)\\b"
+                    "match": "\\b(assert|break|continue|do|elif|else|exit|fn|for|if|in|is|let|loop|module|native|not|return|struct|then|while)\\b"
                 }
             ]
         },
@@ -41,7 +41,7 @@
             "patterns": [
                 {
                     "name": "constant.language.cordy",
-                    "match": "\\b(true|false|nil)\\b"
+                    "match": "\\b(and|false|nil|or|self|true)\\b"
                 }
             ]
         },
@@ -68,7 +68,7 @@
             "patterns": [
                 {
                     "name": "support.function.cordy",
-                    "match": "\\b(print|read|read_line|read_text|write_text|env|argv|bool|repr|eval|typeof|len|range|enumerate|sum|min|min_by|max|max_by|map|filter|flat_map|concat|zip|reduce|sort|sort_by|group_by|reverse|permutations|combinations|all|memoize|pop|pop_front|push|push_front|insert|remove|clear|find|rfind|index_of|rindex_of|abs|sqrt|count_ones|count_zeros|real|imag|lcm|gcd|split|join|replace|search|ord|char|union|intersect|difference|default|keys|values)\\b"
+                    "match": "\\b(abs|all|argv|bool|char|clear|combinations|concat|count_ones|count_zeros|default|difference|enumerate|env|eval|filter|find|flat_map|gcd|group_by|imag|index_of|insert|intersect|join|keys|lcm|len|map|max|max_by|memoize|min|min_by|monitor|ord|permutations|pop|pop_front|print|push|push_front|range|read|read_line|read_text|real|reduce|remove|replace|repr|reverse|rfind|rindex_of|search|sort|sort_by|split|sqrt|sum|typeof|union|values|write_text|zip)\\b"
                 }
             ]
         },
