@@ -3,9 +3,10 @@ import json
 
 CORDY = '../cordy'
 TYPES = ('int', 'str', 'function', 'list', 'heap', 'dict', 'set', 'vector', 'any', 'iterable')
+CONSTANTS = ('nil', 'false', 'true', 'and', 'or', 'self')
 
 def main():
-    with open('%s/docs/stdlib.md' % CORDY, 'r', encoding='utf-8') as f:
+    with open('%s/docs/library.md' % CORDY, 'r', encoding='utf-8') as f:
         text = f.read()
     
     prefix = False
@@ -54,14 +55,18 @@ export function getHovers(): Map<string, string> {
         match = re.match(r'    Keyword([A-Z][a-z]+),', line)
         if match:
             key = match.group(1).lower()
-            if key != 'true' and key != 'false' and key != 'nil':
+            if key not in CONSTANTS:
                 keywords.append(key)
 
     with open('./syntaxes/cordy.tmLanguage.json', 'r', encoding='utf-8') as f:
         syntax = json.load(f)
+    
+    def update(_key: str, _value):
+        syntax['repository'][_key]['patterns'][0]['match'] = '\\b(' + '|'.join(sorted(_value)) + ')\\b'
 
-    syntax['repository']['keywords']['patterns'][0]['match'] = '\\b(' + '|'.join(keywords) + ')\\b'
-    syntax['repository']['builtins']['patterns'][0]['match'] = '\\b(' + '|'.join(k for k in docs.keys() if k not in TYPES) + ')\\b'
+    update('constants', CONSTANTS)
+    update('keywords', keywords)
+    update('builtins', docs.keys() - set(TYPES))
     
     with open('./syntaxes/cordy.tmLanguage.json', 'w', encoding='utf-8') as f:
         json.dump(syntax, f, indent=4)
