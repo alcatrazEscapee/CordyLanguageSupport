@@ -26,6 +26,7 @@ def main():
                 line = line.replace('`', '\\n```\\n')[2:-2]  # Make the top code block a full one, and trim excess newlines
                 buffer = [line]
             else:
+                line = line.encode('unicode-escape').decode('utf-8')
                 buffer.append(line)
         else:
             if line == '---':
@@ -41,7 +42,7 @@ export function getHovers(): Map<string, string> {
 """)
 
         for k, v in docs.items():
-            f.write('        ["%s", "%s"],\n' % (k, '\\n'.join(i.replace('"', '\\"') for i in v)))
+            f.write('        ["%s", "%s"],\n' % (k, '\\n'.join(v)))
 
         f.write("""    ]);
 }
