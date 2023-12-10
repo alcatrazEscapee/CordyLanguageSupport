@@ -49,7 +49,7 @@
             "patterns": [
                 {
                     "name": "constant.numeric.cordy",
-                    "match": "\\b(0x|0b)?[0-9_]+\\b"
+                    "match": "\\b(0x|0b)?[0-9_]+[ij]?\\b"
                 }
             ]
         },
