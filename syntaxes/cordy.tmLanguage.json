@@ -33,7 +33,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.cordy",
-                    "match": "\\b(assert|break|continue|do|elif|else|exit|fn|for|if|in|is|let|loop|module|native|not|return|struct|then|while)\\b"
+                    "match": "\\b(assert|break|continue|do|elif|else|exit|fn|for|if|let|loop|module|native|return|struct|then|while)\\b"
                 }
             ]
         },
@@ -41,7 +41,7 @@
             "patterns": [
                 {
                     "name": "constant.language.cordy",
-                    "match": "\\b(and|false|nil|or|self|true)\\b"
+                    "match": "\\b(and|false|in|is|nil|not|or|self|true)\\b"
                 }
             ]
         },
@@ -68,7 +68,7 @@
             "patterns": [
                 {
                     "name": "support.function.cordy",
-                    "match": "\\b(abs|all|argv|bool|char|clear|combinations|concat|count_ones|count_zeros|default|difference|enumerate|env|eval|filter|find|flat_map|gcd|group_by|imag|index_of|insert|intersect|join|keys|lcm|len|map|max|max_by|memoize|min|min_by|monitor|ord|permutations|pop|pop_front|print|push|push_front|range|read|read_line|read_text|real|reduce|remove|replace|repr|reverse|rfind|rindex_of|search|sort|sort_by|split|sqrt|sum|typeof|union|values|write_text|zip)\\b"
+                    "match": "\\b(abs|all|argv|bin|bool|char|clear|combinations|concat|copy|count_ones|count_zeros|counter|default|denom|difference|enumerate|env|eval|filter|find|flat_map|gcd|group_by|hex|imag|index_of|insert|intersect|join|keys|lcm|len|map|max|max_by|memoize|min|min_by|monitor|numer|ord|permutations|pop|pop_front|print|push|push_front|range|read|read_line|read_text|real|reduce|remove|replace|repr|reverse|rfind|rindex_of|search|sort|sort_by|split|sqrt|sum|trim|typeof|union|values|write_text|zip)\\b"
                 }
             ]
         },
@@ -76,7 +76,7 @@
             "patterns": [
                 {
                     "name": "support.type.cordy",
-                    "match": "\\b(int|str|function|list|heap|dict|set|vector|any|iterable|bool|complex)\\b"
+                    "match": "\\b(any|complex|dict|function|heap|int|iterable|list|rational|set|str|vector)\\b"
                 }
             ]
         },

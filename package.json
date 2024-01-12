@@ -1,8 +1,8 @@
 {
     "name": "cordy-language-support",
     "displayName": "cordy-language-support",
-    "description": "Language Support for Cordy v0.2.2",
-    "version": "0.1.14",
+    "description": "Language Support for Cordy v0.3.1",
+    "version": "0.1.15",
     "engines": {
         "vscode": "^1.74.0"
     },
