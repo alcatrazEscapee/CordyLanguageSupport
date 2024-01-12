@@ -2,8 +2,8 @@ import re
 import json
 
 CORDY = '../cordy'
-TYPES = ('int', 'str', 'function', 'list', 'heap', 'dict', 'set', 'vector', 'any', 'iterable')
-CONSTANTS = ('nil', 'false', 'true', 'and', 'or', 'self')
+TYPES = ('int', 'str', 'function', 'list', 'heap', 'dict', 'set', 'vector', 'any', 'iterable', 'complex', 'rational')
+CONSTANTS = ('nil', 'false', 'true', 'and', 'or', 'self', 'is', 'not', 'in')
 
 def main():
     with open('%s/docs/library.md' % CORDY, 'r', encoding='utf-8') as f:
@@ -68,6 +68,7 @@ export function getHovers(): Map<string, string> {
     update('constants', CONSTANTS)
     update('keywords', keywords)
     update('builtins', docs.keys() - set(TYPES))
+    update('types', TYPES)
     
     with open('./syntaxes/cordy.tmLanguage.json', 'w', encoding='utf-8') as f:
         json.dump(syntax, f, indent=4)
